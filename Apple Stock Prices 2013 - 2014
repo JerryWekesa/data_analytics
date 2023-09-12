@@ -11,3 +11,7 @@ FROM tutorial.aapl_historical_stock_price
 WHERE year = 2014 and (id in(1,2,3,4,5)) or id in(10,20,30,40,50) and (year = 2013)
 
 /* This code shows all attributes where the year is 2014 and the id  is 1,2,3,4,5 or the year is 2013 and the id is 10,20,30,40,50 */
+
+
+SELECT SUM(open)/COUNT(open) AS avg_open_price
+  FROM tutorial.aapl_historical_stock_price -- This displays the average opening price using arthimetic--
