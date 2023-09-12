@@ -1,0 +1,13 @@
+SELECT year,month,high,low
+FROM tutorial.aapl_historical_stock_price
+WHERE year = 2013 and (month BETWEEN 9 and 12) and (high > 500)
+ORDER BY month ASC, high DESC 
+/*This query was run to show the 
+highest and lowest between September and December of 2013 (the final quarter of the year) where the highest stock is above 500*/
+
+
+SELECT *
+FROM tutorial.aapl_historical_stock_price
+WHERE year = 2014 and (id in(1,2,3,4,5)) or id in(10,20,30,40,50) and (year = 2013)
+
+/* This code shows all attributes where the year is 2014 and the id  is 1,2,3,4,5 or the year is 2013 and the id is 10,20,30,40,50 */
