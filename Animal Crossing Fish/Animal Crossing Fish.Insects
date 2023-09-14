@@ -1,0 +1,21 @@
+SELECT
+  animal_crossing_insects.name as Insect_Name, 
+  animal_crossing_fish.name  as Fish_Name,
+  animal_crossing_insects.sell as Insect_Sell, 
+  animal_crossing_fish.sell as Fish_Sell, 
+  animal_crossing_fish.where_how as Fish_Where_How,
+  animal_crossing_insects.where_how as Insects_Where_How
+FROM
+  tutorial.animal_crossing_insects,
+  tutorial.animal_crossing_fish
+WHERE
+  animal_crossing_insects.sell = animal_crossing_fish.sell
+  AND animal_crossing_insects.sell > 1000 
+  and animal_crossing_fish.sell > 1000
+  and animal_crossing_fish.where_how = 'River'
+  
+  
+  
+  /* this code does a join with the sell attribute to display the 
+  insect name, fish name, insect sell, fish sell, and the fish and insect where how
+  where both the insect and fish sell are greater than 1000 and the fish where how is the River.
